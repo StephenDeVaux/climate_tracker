@@ -1,0 +1,10 @@
+.Info { 
+    display: flex;
+    justify-content: center;
+}
+
+.Info-slider { 
+    width: 200px;
+    padding: 30px;
+    background-color: grey;
+}

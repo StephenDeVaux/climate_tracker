@@ -1,0 +1,9 @@
+.Atlas-map { 
+    background-image: url("./images/World_map.svg");
+    background-color: #3f72af;
+    background-size: cover;
+    height: 26.1vw;
+    width: 40vw;
+    border-radius: 3rem;
+
+}

@@ -1,0 +1,13 @@
+.Navbar { 
+    display: flex;
+    justify-content: center;
+}
+
+.Navbar-btn { 
+    background-color: Grey;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 1rem; 
+}
+
