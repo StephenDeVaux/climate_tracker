@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: #282c34;
-  color: white;
+  background-color: #f9f7f7;
+  color: black;
   min-height: 100vh;
   margin: 0;
 
@@ -28,7 +28,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-footer{ 
@@ -53,4 +52,13 @@
   grid-template-columns: 5fr 1fr 5fr;
   justify-items: center;
   align-items: center;
+}
+
+.Atlas-co2{ 
+  background: rgba(0, 0, 0, 0.18);
+  padding: 23px;
+  border-radius: 50px;
+  margin: 10px;
+  margin: 0 auto;
+  transition: 1s;
 }

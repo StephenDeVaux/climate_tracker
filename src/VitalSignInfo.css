@@ -4,7 +4,14 @@
 }
 
 .Info-slider { 
-    width: 200px;
-    padding: 30px;
-    background-color: grey;
+    padding: 0 20px;
+}
+
+.Info p { 
+    font-size: 1rem;
+    width: 100%
+}
+
+.Info__blurb-slider {
+    width: 40%;
 }
