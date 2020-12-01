@@ -6,7 +6,8 @@ export default function VitalSignNavBar() {
         <div className="Navbar"> 
             <div></div>
             <VitalSignBtn label="CO2" /> 
-            <VitalSignBtn label="Sea Ice" /> 
+            <VitalSignBtn label="North Sea Ice" /> 
+            <VitalSignBtn label="South Sea Ice" /> 
             <VitalSignBtn label="Pandas" /> 
             <div></div>
         </div>

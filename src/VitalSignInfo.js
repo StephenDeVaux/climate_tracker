@@ -7,52 +7,57 @@ import { Line } from 'react-chartjs-2'
 import { useContext } from 'react'
 import { InfoContext } from './InfoContext'
 
-const sliderMarks = [
-    {
-        value: 0,
-        label: '0',
-    },
 
-    {
-        value: 2020,
-        label: '2020',
-    },
-];
-const graphOptions = {
-    scales: {
-        yAxes: [
-            {
-                ticks: {
-                    beginAtZero: true,
-                    maxTicksLimit: 5,
-                },
-            },
-        ],
-        xAxes: [
-            {
-                ticks: {
-                    max: 2020,
-                    min: 20,
-                    // maxTicksLimit: 10,
-                    stepSize: 200
-                },
-            },
-        ]
-    },
-}
 
 export default function VitalSignInfo() {
-    const { year, co2, co2Data, setYear } = useContext(InfoContext)
+    const { blurb, label, year, xAxisYears, yAxisData, setYear } = useContext(InfoContext)
     const handleChange = (event, newValue) => {
         setYear(newValue)
     };
 
+    const min = Number(xAxisYears[0])
+    const max = Number(xAxisYears[xAxisYears.length-1])
+
+    const sliderMarks = [
+        {
+            value: min,
+            label: min,
+        },
+    
+        {
+            value: max,
+            label: max,
+        },
+    ];
+    const graphOptions = {
+        scales: {
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 5,
+                    },
+                },
+            ],
+            xAxes: [
+                {
+                    ticks: {
+                        max: max,
+                        min: 20,
+                        // maxTicksLimit: 10,
+                        stepSize: 500
+                    },
+                },
+            ]
+        },
+    }
+
     const data = {
-        labels: Object.keys(co2Data),
+        labels: xAxisYears,
         datasets: [
             {
-                label: "CO2 (ppm)",
-                data: Object.values(co2Data),
+                label: label,
+                data: yAxisData,
                 fill: false,
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgba(255, 99, 132, 0.2)',
@@ -64,17 +69,17 @@ export default function VitalSignInfo() {
         <div className="Info">
             <div className="Info__blurb-slider">
                 <p>
-                    Carbon Diaoxide (CO2) is a green house gas in the atmosphere that traps heat on earth by preventing it from being radiated to space. Sources are industrial processes like burning fossil fuels while deforestation reduces earths ability to reabsorb it.
+                    {blurb}
                 </p>
                 <div className="Info-slider">
                     <Slider
                         // getAriaValueText={valuetext}
                         aria-labelledby="discrete-slider-always"
-                        step={10}
+                        step={1}
                         marks={sliderMarks}
                         valueLabelDisplay="auto"
-                        min={0}
-                        max={2020}
+                        min={min}
+                        max={max}
                         value={year}
                         onChange={handleChange}
                     />

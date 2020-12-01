@@ -16,7 +16,7 @@ function App() {
         <VitalSignNavBar />
         <VitalSignInfo />
       </header>
-      <body className="App-body">
+      <main className="App-body">
         <div>
           <div>Year: {year}</div>
           <div className="Atlas-co2" style={{ padding: `${co2 / 10}px` }}>
@@ -32,7 +32,7 @@ function App() {
             <Atlas />
           </div>
         </div>
-      </body>
+      </main>
       <footer className="App-footer">Climte clock: 7 years 45days 2 hours 3min 5 seconds</footer>
     </div>
   );
