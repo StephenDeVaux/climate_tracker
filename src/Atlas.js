@@ -13,7 +13,7 @@ export default function Atlas({ showThermometer, northIce, southIce, temp }) {
                     {showThermometer ? <Thermometer  value={temp} /> : null}
                 </div>
                 <div></div>
-                <div className="Atlas__ice south" style={{ height: `${southIce}px`, width: `${southIce * 2}px` }}></div>
+                <div className="Atlas__ice south shadow-pop-tl" style={{ height: `${southIce}px`, width: `${southIce * 2}px` }}></div>
                 <div></div>
                 <div></div>
             </div>

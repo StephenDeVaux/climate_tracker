@@ -32,7 +32,7 @@ function App() {
           </div>
         </div>
         <div>
-          <div>Year: 2020 (Now)</div>
+          <div>Year: 2020</div>
           <div className="Atlas-co2" style={{ padding: `${co2Now / 10}px` }}>
             <Atlas
               showThermometer={showThermometer}

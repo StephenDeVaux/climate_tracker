@@ -65,24 +65,28 @@ export function InfoProvider({ children }) {
     const selectVitalSign = (sign) => {
         setShowThermometer(false)
         if (sign === "CO2") {
+            setYear(Object.keys(co2Data)[0])
             setBlurb(blurbs["co2"])
             setyAxisData(co2Values)
             setxAxisData(Object.keys(co2Data))
             setLabel(labels["co2"])
         }
         if (sign === "North Sea Ice") {
+            setYear(northSeaIceData.map(row => row.year)[0])
             setBlurb(blurbs["seaIce"])
             setyAxisData(northSeaIceData.map(row => row.extent))
             setxAxisData(northSeaIceData.map(row => row.year))
             setLabel(labels["seaIce"])
         }
         if (sign === "South Sea Ice") {
+            setYear(southSeaIceData.map(row => row.year)[0])
             setBlurb(blurbs["seaIce"])
             setyAxisData(southSeaIceData.map(row => row.extent))
             setxAxisData(southSeaIceData.map(row => row.year))
             setLabel(labels["seaIce"])
         }
         if (sign === "Global Temp") {
+            setYear(Object.keys(tempData)[0])
             setBlurb(blurbs["globalTemp"])
             setyAxisData(Object.values(tempData))
             setxAxisData(Object.keys(tempData))
@@ -90,24 +94,28 @@ export function InfoProvider({ children }) {
             setShowThermometer(true)
         }
         if (sign === "Forests") {
+            setYear(Object.keys(forestData)[0])
             setBlurb(blurbs["forest"])
             setyAxisData(Object.values(forestData))
             setxAxisData(Object.keys(forestData))
             setLabel(labels["forest"])
         }
         if (sign === "Sea Level") {
+            setYear(Object.keys(seaLevelData)[0])
             setBlurb(blurbs["seaLevel"])
             setyAxisData(Object.values(seaLevelData))
             setxAxisData(Object.keys(seaLevelData))
             setLabel(labels["seaLevel"])
         }
         if (sign === "Population") {
+            setYear(Object.keys(populationData)[0])
             setBlurb(blurbs["population"])
             setyAxisData(Object.values(populationData))
             setxAxisData(Object.keys(populationData))
             setLabel(labels["population"])
         }
         if (sign === "Cows") {
+            setYear(Object.keys(cattleData)[0])
             setBlurb(blurbs["cattle"])
             setyAxisData(Object.values(cattleData))
             setxAxisData(Object.keys(cattleData))
