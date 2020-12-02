@@ -8,16 +8,20 @@ import { InfoContext } from './InfoContext'
 import useScript from './useScript';
 
 function App() {
-  const { showThermometer, year, co2, northIce, southIce, northIceNow, southIceNow, co2Now, temp, tempNow } = useContext(InfoContext)
+  const { showThermometer, showInfo, year, co2, northIce, southIce, northIceNow, southIceNow, co2Now, temp, tempNow } = useContext(InfoContext)
   // useScript("https://climateclock.world/widget-v1.js");
   useScript("https://climateclock.world/widget-v2.js");
   useScript("https://climateclock.world/flatten.js");
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App_h1">What has Climate Change, Changed?</h1>
-        <VitalSignNavBar />
-        <VitalSignInfo />
+        <div className="App-header-background">
+          <h1 className="App_h1">What has Climate Change, Changed?</h1>
+          <VitalSignNavBar />
+        </div>
+        <div className="App-info">
+          {showInfo ? <VitalSignInfo /> : <climate-clock />}
+        </div>
       </header>
       <main className="App-body">
         <div>
@@ -45,7 +49,7 @@ function App() {
       </main>
       <footer className="App-footer">
         {/* 7 years 30 days 11:24:45 */}
-      <climate-clock />
+
       </footer>
     </div>
   );

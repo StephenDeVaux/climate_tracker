@@ -13,6 +13,7 @@ export default function VitalSignNavBar() {
             <VitalSignBtn label="Sea Level" />  
             <VitalSignBtn label="Population" />  
             <VitalSignBtn label="Cows" />  
+            <VitalSignBtn label="Climate Clock" />  
             <div></div>
         </div>
     )

@@ -18,15 +18,24 @@
     background: white;
     margin: 0 auto;
     transition: 0.5s;
+    background-image: url("https://www.climate.gov/sites/default/files/pineislandglacier_oli_2018311_620.jpg");
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
 }
 
 .north {
+    border-top-left-radius: 100px 25px;
+    border-top-right-radius: 100px 25px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
+
 }
 
 .south { 
     align-self: end;
+    border-bottom-left-radius: 100px 25px;
+    border-bottom-right-radius: 100px 25px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
 }

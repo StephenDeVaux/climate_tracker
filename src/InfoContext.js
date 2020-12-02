@@ -45,6 +45,7 @@ export function InfoProvider({ children }) {
     const [xAxisYears, setxAxisData] = useState(Object.keys(co2Data))
     const [label, setLabel] = useState(labels["co2"])
     const [showThermometer, setShowThermometer] = useState(false)
+    const [showInfo, setShowInfo] = useState(true)
 
     const [year, setYearState] = useState(0)
     const [co2, setCo2] = useState(co2Values[0])
@@ -64,6 +65,7 @@ export function InfoProvider({ children }) {
 
     const selectVitalSign = (sign) => {
         setShowThermometer(false)
+        setShowInfo(true)
         if (sign === "CO2") {
             setYear(Object.keys(co2Data)[0])
             setBlurb(blurbs["co2"])
@@ -120,6 +122,9 @@ export function InfoProvider({ children }) {
             setyAxisData(Object.values(cattleData))
             setxAxisData(Object.keys(cattleData))
             setLabel(labels["cattle"])
+        } 
+        if (sign == "Climate Clock") { 
+            setShowInfo(false)
         }
     }
 
@@ -132,6 +137,7 @@ export function InfoProvider({ children }) {
             co2, co2Data, co2Now,
             northIce, southIce, northIceNow, southIceNow,
             temp, tempNow, showThermometer,
+            showInfo, 
             setYear, selectVitalSign
         }} >
             {children}
