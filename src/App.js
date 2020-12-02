@@ -8,7 +8,7 @@ import { InfoContext } from './InfoContext'
 import useScript from './useScript';
 
 function App() {
-  const { year, co2, northIce, southIce, northIceNow, southIceNow, co2Now, temp, tempNow } = useContext(InfoContext)
+  const { showThermometer, year, co2, northIce, southIce, northIceNow, southIceNow, co2Now, temp, tempNow } = useContext(InfoContext)
   // useScript("https://climateclock.world/widget-v1.js");
   useScript("https://climateclock.world/widget-v2.js");
   useScript("https://climateclock.world/flatten.js");
@@ -24,6 +24,7 @@ function App() {
           <div>Year: {year}</div>
           <div className="Atlas-co2" style={{ padding: `${co2 / 10}px` }}>
             <Atlas
+              showThermometer={showThermometer}
               southIce={southIce * 10}
               northIce={northIce * 10}
               temp={temp}
@@ -34,6 +35,7 @@ function App() {
           <div>Year: 2020 (Now)</div>
           <div className="Atlas-co2" style={{ padding: `${co2Now / 10}px` }}>
             <Atlas
+              showThermometer={showThermometer}
               southIce={southIceNow * 10}
               northIce={northIceNow * 10}
               temp={tempNow}
