@@ -4,10 +4,14 @@
 }
 
 .Navbar-btn { 
-    background-color: Grey;
-    color: black;
+    border: none;
+    background-color: rgb(246 228 203);
+    color: #5F575A;
+    height: 3rem; 
+    width: 7rem;
     padding: 5px;
     border-radius: 5px;
     margin: 1rem; 
+    text-transform: uppercase;
 }
 

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { InfoContext } from './InfoContext'
 
-export default function VitalSignBtn({ label }) {
+export default function VitalSignBtn({ label, selected }) {
 
     const { selectVitalSign } = useContext(InfoContext)
 
@@ -9,6 +9,7 @@ export default function VitalSignBtn({ label }) {
         <div >
             <button
                 className="Navbar-btn"
+                style={ selected ? { "background-color": "#fb6384" } : null }
                 onClick={() => selectVitalSign(label) }>
                 {label}
             </button>
