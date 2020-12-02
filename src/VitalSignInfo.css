@@ -1,6 +1,7 @@
 .Info { 
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .Info-slider { 
@@ -13,9 +14,12 @@
 }
 
 .Info__blurb-slider {
-    width: 40%;
+    width: 80%;
 }
 
 .Info-graph{ 
-    width: 30%;
+    width: 40vh;
+
+    /* height: 30vh; */
+    /* width: 30%; */
 }

@@ -9,6 +9,7 @@ export default function VitalSignNavBar() {
             <VitalSignBtn label="North Sea Ice" /> 
             <VitalSignBtn label="South Sea Ice" /> 
             <VitalSignBtn label="Global Temp" />  
+            <VitalSignBtn label="Forests" />  
             <div></div>
         </div>
     )
