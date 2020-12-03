@@ -21,6 +21,7 @@ npm run eject <br/>
 ### Difficulties
 - Finding good data sets for relevent information. Was hoping to include endangered species but very limited data on animal numbers
 - Finding good design for displaying of data. I wanted it to be graphical but because but was tricky to find exisiting libraries that would fit in with all the data sets which resulted in attempting to keep it simple and using css. However the end result is that it is not particularly polished looking. 
+- integrating the data directly into the application - ideally have a seperate backend that fetches latest data and processess it but as the data doesn't update often is not strictly necessary. Currently used a seperate local project to read csv files and process them as required. (seperate repo https://github.com/StephenDeVaux/earth_tracker_data )
 
 ### Lessons
 - React
