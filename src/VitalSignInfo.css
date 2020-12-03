@@ -19,7 +19,9 @@
 
 .Info-graph{ 
     width: 40vh;
+}
 
-    /* height: 30vh; */
-    /* width: 30%; */
+.Info-slider-text {
+    font-size: 0.9rem; 
+    color: #625958b3;
 }

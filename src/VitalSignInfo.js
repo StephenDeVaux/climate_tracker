@@ -72,6 +72,7 @@ export default function VitalSignInfo() {
                     {blurb}
                 </p>
                 <div className="Info-slider">
+                    <div className="Info-slider-text">See how its changed</div>
                     <Slider
                         // getAriaValueText={valuetext}
                         aria-labelledby="discrete-slider-always"

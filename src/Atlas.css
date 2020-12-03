@@ -18,7 +18,7 @@
     background: white;
     margin: 0 auto;
     transition: 0.5s;
-    background-image: url("https://www.climate.gov/sites/default/files/pineislandglacier_oli_2018311_620.jpg");
+    background-image: url("./images/ice.png");
     background-position: center;
     /* background-attachment: fixed; */
     background-size: cover;
