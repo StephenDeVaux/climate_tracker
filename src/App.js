@@ -8,7 +8,9 @@ import { InfoContext } from './InfoContext'
 import useScript from './useScript';
 
 function App() {
-  const { showThermometer, showInfo, valueText, valueNowText, year, co2, northIce, southIce, northIceNow, southIceNow, co2Now, temp, tempNow, sign } = useContext(InfoContext)
+  const { showThermometer, showInfo, valueText, valueNowText, year, co2, northIce, southIce, northIceNow, southIceNow, co2Now, temp, tempNow, sign, seaLevel, seaLevelNow,
+    population, populationNow, cattle, cattleNow
+  } = useContext(InfoContext)
   // useScript("https://climateclock.world/widget-v1.js");
   useScript("https://climateclock.world/widget-v2.js");
   useScript("https://climateclock.world/flatten.js");
@@ -33,6 +35,9 @@ function App() {
               southIce={southIce * 10}
               northIce={northIce * 10}
               temp={temp}
+              seaLevel={seaLevel}
+              population={population}
+              cattle={cattle}
             />
           </div>
         </div>
@@ -45,6 +50,9 @@ function App() {
               southIce={southIceNow * 10}
               northIce={northIceNow * 10}
               temp={tempNow}
+              seaLevel={seaLevelNow}
+              population={populationNow}
+              cattle={cattleNow}
             />
           </div>
         </div>

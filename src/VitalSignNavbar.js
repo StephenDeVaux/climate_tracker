@@ -13,10 +13,10 @@ export default function VitalSignNavBar() {
             <VitalSignBtn selected={ sign === "North Sea Ice"} label="North Sea Ice" /> 
             <VitalSignBtn selected={ sign === "South Sea Ice"} label="South Sea Ice" /> 
             <VitalSignBtn selected={ sign === "Global Temp"} label="Global Temp" />  
-            <VitalSignBtn selected={ sign === "Forests"} label="Forests" />  
             <VitalSignBtn selected={ sign === "Sea Level"} label="Sea Level" />  
             <VitalSignBtn selected={ sign === "Population"} label="Population" />  
             <VitalSignBtn selected={ sign === "Cows"} label="Cows" />  
+            {/* <VitalSignBtn selected={ sign === "Forests"} label="Forests" />   */}
             <VitalSignBtn selected={ sign === "Climate Clock"} label="Climate Clock" />  
             <div></div>
         </div>
