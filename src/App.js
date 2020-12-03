@@ -39,7 +39,7 @@ function App() {
         <div>
           <div className="App-year">Year: 2020</div>
           <div className="App-year"> {valueNowText}</div>
-          <div className="Atlas-co2" style={ sign === "CO2" ? { padding: `${co2 / 10}px` , background: "rgb(149 156 149)"} : { padding: `${co2 / 10}px` } }>
+          <div className="Atlas-co2" style={ sign === "CO2" ? { padding: `${co2Now / 10}px` , background: "rgb(149 156 149)"} : { padding: `${co2Now / 10}px` } }>
             <Atlas
               showThermometer={showThermometer}
               southIce={southIceNow * 10}

@@ -15,3 +15,7 @@
     text-transform: uppercase;
 }
 
+.Navbar-btn:hover { 
+    /* background-color: yellowgreen; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
