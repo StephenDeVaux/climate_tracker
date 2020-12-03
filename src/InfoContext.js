@@ -10,13 +10,14 @@ let populationData = require('./data/population/population.json')
 let cattleData = require('./data/livestock/liveStock.json')
 
 let blurbs = {
-    co2: 'Carbon Diaoxide (CO2) is a green house gas in the atmosphere that traps heat on earth by preventing it from being radiated to space. Sources are industrial processes like burning fossil fuels while deforestation reduces earths ability to reabsorb it.',
-    seaIce: 'Sea ice is important as it reflects a great deal of sunlight back into space',
-    globalTemp: "Ocean warming - the ocean absorbs much of the excess heat due to global warming. An increase in ocean temperature affets ecosystems within it, one of the most delicate being coral. Changes in ocean temperature also affect the natural balance of weather patterns and could theoretically lead to more extreme weather. ",
-    forest: 'The forests are dissapeaering because of blah blah blah, bad for C02 bad for biodiveresty',
-    seaLevel: 'Rising sea level blah blah blah',
-    population: 'Has incraesed much in recent times, and the world has to support all these hungry hungry mouths',
-    cattle: 'All the cattle to feed all the people',
+    co2: 'Carbon Diaoxide (CO2) is a green house gas in the atmosphere that traps heat on earth by preventing it from being radiated to space. Sources are industrial processes like burning fossil fuels while deforestation reduces earths ability to reabsorb it. CO2 accelerates global warming by trapping the heat on earth.',
+    seaIce: 'Arctic Sea ice in the North Pole contracts to its minimum in September each year. This minimum has been reducing due to global warming. Arctic sea ice is important as the large white surface reflects a significant amount of the suns radiation back into space, therefore loss of ice contributes even further to global warming. The melted ice enters the ocean and contributes to the rising sea level.',
+    southSeaIce: 'Antartic sea ice is important as the large white surface reflects a significant amount of the suns radiation back into space. Therefore loss of ice contributes even further to global warming. The melted ice enters the ocean and contributes to the rising sea level.',
+    globalTemp: "The global temperature index is a measure of the change in average global temperature relative to the 1951-1980 average temperatures. It is believed that we should not allow the index to reach past 1.5°C as this could cause the environment to enter a positive reinforcing feedback loop of continued global warming",
+    forest: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, totam? Amet deleniti illum beatae. Veritatis porro libero esse suscipit quam tenetur vero reprehenderit dolores ad assumenda? Harum maxime ea quidem tenetur consequatur, dolorum cupiditate aut mollitia in sunt voluptatibus sit incidunt pariatur autem velit quos vel. Odit quod vero numquam?",
+    seaLevel: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, totam? Amet deleniti illum beatae. Veritatis porro libero esse suscipit quam tenetur vero reprehenderit dolores ad assumenda? Harum maxime ea quidem tenetur consequatur, dolorum cupiditate aut mollitia in sunt voluptatibus sit incidunt pariatur autem velit quos vel. Odit quod vero numquam?",
+    population: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, totam? Amet deleniti illum beatae. Veritatis porro libero esse suscipit quam tenetur vero reprehenderit dolores ad assumenda? Harum maxime ea quidem tenetur consequatur, dolorum cupiditate aut mollitia in sunt voluptatibus sit incidunt pariatur autem velit quos vel. Odit quod vero numquam?",
+    cattle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, totam? Amet deleniti illum beatae. Veritatis porro libero esse suscipit quam tenetur vero reprehenderit dolores ad assumenda? Harum maxime ea quidem tenetur consequatur, dolorum cupiditate aut mollitia in sunt voluptatibus sit incidunt pariatur autem velit quos vel. Odit quod vero numquam?",
 }
 
 let labels = {
@@ -131,7 +132,7 @@ export function InfoProvider({ children }) {
         }
         if (sign === "South Sea Ice") {
             setYear(southSeaIceData.map(row => row.year)[0])
-            setBlurb(blurbs["seaIce"])
+            setBlurb(blurbs["southSeaIce"])
             setyAxisData(southSeaIceData.map(row => row.extent))
             setxAxisData(southSeaIceData.map(row => row.year))
             setLabel(labels["seaIce"])
