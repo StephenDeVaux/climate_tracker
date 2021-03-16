@@ -10,7 +10,9 @@ Idea was to collect data of climate change from multiple places and display it i
 2. Material-ui
 3. Chart.js 
 
-link to heroku hosted website: https://sdv-climate-change.herokuapp.com
+link to heroku hosted website(Can take awhile to get going from a cold start...): https://sdv-climate-change.herokuapp.com
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/60765528/111290860-ab2ef900-869a-11eb-999d-84c3d10b4994.png">
 
 ### Available Scripts
 npm start  <br/>
